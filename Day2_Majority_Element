@@ -1,0 +1,15 @@
+def majorityElement( nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        dic={}
+        for i in nums:
+            if i in dic.keys():
+                dic[i]+=1
+            else:
+                dic[i]=1
+        maxi=len(dic)/2
+        for i in dic.keys():
+            if dic[i]>maxi:
+                return i
