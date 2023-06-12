@@ -1,0 +1,18 @@
+from os import *
+from sys import *
+from collections import *
+from math import *
+
+from typing import *
+
+def maximumXor(ls) -> int:
+    # Write your code here.
+    max=0
+    for i in ls:
+        for j in ls:
+            if i^j>max:
+                max=i^j
+    return max
+    
+    
+    maximumXOR([1,2,4])
