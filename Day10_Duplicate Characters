@@ -1,0 +1,12 @@
+def duplicate_char(s: str, n: int):
+    ls=[]
+    for letter in s:
+        if s.count(letter)>1:
+          tup=(letter,s.count(letter))
+          if tup not in ls:
+            ls.append(tup)
+          else:
+            pass
+    return sorted(ls)
+
+duplicate_char('kghplowbxrrendulwhb',5)
