@@ -1,0 +1,23 @@
+class Solution(object):
+    def odd(self,num):
+        if num%2!=0 :
+            return True
+        return False
+
+    def threeConsecutiveOdds(self, arr):
+        """
+        :type arr: List[int]
+        :rtype: bool
+        """
+        i=0
+        limit=len(arr)-2
+        for i in range(limit):
+            ls=arr[i:i+3]
+            count=0
+            for num in ls:
+                if self.odd(num):
+                    count+=1
+            if count==3:
+                return True
+        return False
+        
